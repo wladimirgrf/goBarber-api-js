@@ -3,4 +3,3 @@ yarn-error.log
 .vscode
 node_modules
 tmp/uploads/*
-src/database/migrations/*
