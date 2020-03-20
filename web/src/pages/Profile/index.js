@@ -5,6 +5,7 @@ import { useSelector, useDispatch } from 'react-redux';
 import { Container } from './styles';
 import AvatarInput from './AvatarInput';
 import { updateProfileRequest } from '~/store/modules/user/actions';
+import { signOut } from '~/store/modules/auth/actions';
 
 export default function Profile() {
   const profile = useSelector(state => state.user.profile);
@@ -12,6 +13,10 @@ export default function Profile() {
 
   function handleSubmit(data) {
     dispatch(updateProfileRequest(data));
+  }
+
+  function handleSignOut() {
+    dispatch(signOut());
   }
 
   return (
@@ -37,7 +42,9 @@ export default function Profile() {
 
         <button type="submit">Update</button>
       </Form>
-      <button type="button">Logout</button>
+      <button type="button" onClick={handleSignOut}>
+        Logout
+      </button>
     </Container>
   );
 }
