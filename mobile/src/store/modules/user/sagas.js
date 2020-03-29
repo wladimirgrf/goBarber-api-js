@@ -17,7 +17,7 @@ export function* updateProfile({ payload }) {
 
     const response = yield call(api.put, 'users', profile);
 
-    Alert.alert('Updated profile!', '');
+    Alert.alert('Success!', 'Updated profile.');
 
     yield put(updateProfileSuccess(response.data));
   } catch (err) {
