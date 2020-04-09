@@ -1,6 +1,14 @@
-yarn.lock
-yarn-error.log
+# dependencies
+node_modules
+
+# production
+dist
+
+# misc
 .vscode
 .env
-node_modules
+
+yarn.lock
+yarn-error.log
+
 tmp/uploads/*
